@@ -33,17 +33,14 @@ const Home = () => {
         <div className="banner">
           <div className="banner-desc">
             <h1 className="text-thin">
-              <strong>See</strong>
-              &nbsp;everything with&nbsp;
-              <strong>Clarity</strong>
+              <strong>Joyas Sol</strong>
             </h1>
             <p>
-              Buying eyewear should leave you happy and good-looking, with money in your pocket.
-              Glasses, sunglasses, and contacts—we’ve got your eyes covered.
+            Joyas confeccionadas a mano, personalizadas a pedido, hipoalergénico y con envío a nivel nacional.
             </p>
             <br />
             <Link to={SHOP} className="button">
-              Shop Now &nbsp;
+              Comprar Ahora &nbsp;
               <ArrowRightOutlined />
             </Link>
           </div>
@@ -51,8 +48,8 @@ const Home = () => {
         </div>
         <div className="display">
           <div className="display-header">
-            <h1>Featured Products</h1>
-            <Link to={FEATURED_PRODUCTS}>See All</Link>
+            <h1>Productos Destacados</h1>
+            <Link to={FEATURED_PRODUCTS}>Ver Todos</Link>
           </div>
           {(errorFeatured && !isLoadingFeatured) ? (
             <MessageDisplay
@@ -69,8 +66,8 @@ const Home = () => {
         </div>
         <div className="display">
           <div className="display-header">
-            <h1>Recommended Products</h1>
-            <Link to={RECOMMENDED_PRODUCTS}>See All</Link>
+            <h1>Productos Recomendados</h1>
+            <Link to={RECOMMENDED_PRODUCTS}>Ver Todos</Link>
           </div>
           {(errorRecommended && !isLoadingRecommended) ? (
             <MessageDisplay
