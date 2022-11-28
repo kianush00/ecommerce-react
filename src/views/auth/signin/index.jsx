@@ -14,10 +14,10 @@ import * as Yup from 'yup';
 
 const SignInSchema = Yup.object().shape({
   email: Yup.string()
-    .email('Email is not valid.')
-    .required('Email is required.'),
+    .email('Email inválido.')
+    .required('Se requiere email.'),
   password: Yup.string()
-    .required('Password is required.')
+    .required('Se requiere contraseña.')
 });
 
 const SignIn = ({ history }) => {
@@ -29,7 +29,7 @@ const SignIn = ({ history }) => {
   const dispatch = useDispatch();
 
   useScrollTop();
-  useDocumentTitle('Sign In | Salinaka');
+  useDocumentTitle('Iniciar Sesión | Joyas Sol');
 
   useEffect(() => () => {
     dispatch(setAuthStatus(null));
@@ -65,7 +65,7 @@ const SignIn = ({ history }) => {
           )}
           <div className={`auth ${authStatus?.message && (!authStatus?.success && 'input-error')}`}>
             <div className="auth-main">
-              <h3>Sign in to Salinaka</h3>
+              <h3>Inicia sesión en Joyas Sol</h3>
               <br />
               <div className="auth-wrapper">
                 <Formik
@@ -85,7 +85,7 @@ const SignIn = ({ history }) => {
                           name="email"
                           type="email"
                           label="Email"
-                          placeholder="test@example.com"
+                          placeholder="abc@ejemplo.com"
                           component={CustomInput}
                         />
                       </div>
@@ -95,7 +95,7 @@ const SignIn = ({ history }) => {
                           name="password"
                           type="password"
                           label="Password"
-                          placeholder="Your Password"
+                          placeholder="Contraseña"
                           component={CustomInput}
                         />
                       </div>
@@ -106,14 +106,14 @@ const SignIn = ({ history }) => {
                           style={{ textDecoration: 'underline' }}
                           to={FORGOT_PASSWORD}
                         >
-                          <span>Forgot password?</span>
+                          <span>¿Has olvidado tu contraseña?</span>
                         </Link>
                         <button
                           className="button auth-button"
                           disabled={isAuthenticating}
                           type="submit"
                         >
-                          {isAuthenticating ? 'Signing In' : 'Sign In'}
+                          {isAuthenticating ? 'Iniciando sesión' : 'Iniciar sesión'}
                           &nbsp;
                           {isAuthenticating ? <LoadingOutlined /> : <ArrowRightOutlined />}
                         </button>
@@ -124,13 +124,13 @@ const SignIn = ({ history }) => {
               </div>
             </div>
             <div className="auth-divider">
-              <h6>OR</h6>
+              <h6>Ó</h6>
             </div>
             <SocialLogin isLoading={isAuthenticating} />
           </div>
           <div className="auth-message">
             <span className="auth-info">
-              <strong>Don&apos;t have an account?</strong>
+              <strong>¿No tienes una cuenta?</strong>
             </span>
             <button
               className="button button-small button-border button-border-gray button-icon"
@@ -138,7 +138,7 @@ const SignIn = ({ history }) => {
               onClick={onSignUp}
               type="button"
             >
-              Sign Up
+              Registrarse
             </button>
           </div>
         </>

@@ -18,12 +18,12 @@ import ShippingTotal from './ShippingTotal';
 
 const FormSchema = Yup.object().shape({
   fullname: Yup.string()
-    .required('Full name is required.')
+    .required('Se requiere nombre completo.')
     .min(2, 'Full name must be at least 2 characters long.')
     .max(60, 'Full name must only be less than 60 characters.'),
   email: Yup.string()
-    .email('Email is not valid.')
-    .required('Email is required.'),
+    .email('Email inválido.')
+    .required('Se requiere email.'),
   address: Yup.string()
     .required('Shipping address is required.'),
   mobile: Yup.object()
@@ -39,7 +39,7 @@ const FormSchema = Yup.object().shape({
 });
 
 const ShippingDetails = ({ profile, shipping, subtotal }) => {
-  useDocumentTitle('Check Out Step 2 | Salinaka');
+  useDocumentTitle('Paso 2 Compra | Joyas Sol');
   useScrollTop();
   const dispatch = useDispatch();
   const history = useHistory();

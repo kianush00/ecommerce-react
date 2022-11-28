@@ -18,8 +18,8 @@ const FormSchema = Yup.object().shape({
     .max(60, 'Full name should be only be 4 characters long.')
     .required('Full name is required'),
   email: Yup.string()
-    .email('Email is not valid.')
-    .required('Email is required.'),
+    .email('Email inválido.')
+    .required('Se requiere email.'),
   address: Yup.string(),
   mobile: Yup.object()
     .shape({
@@ -31,7 +31,7 @@ const FormSchema = Yup.object().shape({
 });
 
 const EditProfile = () => {
-  useDocumentTitle('Edit Account | Salinaka');
+  useDocumentTitle('Editar Cuenta | Joyas Sol');
   useScrollTop();
 
   const modal = useModal();

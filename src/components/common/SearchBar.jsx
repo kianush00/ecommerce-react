@@ -73,7 +73,7 @@ const SearchBar = () => {
           onChange={onSearchChange}
           onKeyUp={onKeyUp}
           onFocus={onFocusInput}
-          placeholder="Search product..."
+          placeholder="Buscar producto..."
           readOnly={isLoading}
           type="text"
           value={searchInput}

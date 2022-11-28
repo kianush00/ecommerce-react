@@ -40,7 +40,7 @@ const ProductList = (props) => {
       <MessageDisplay
         message={requestStatus?.message || 'Something went wrong :('}
         action={fetchProducts}
-        buttonLabel="Try Again"
+        buttonLabel="Volver a intentar"
       />
     );
   }

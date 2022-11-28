@@ -5,7 +5,7 @@ import bannerImg from '@/images/banner-girl-1.png';
 import React from 'react';
 
 const RecommendedProducts = () => {
-  useDocumentTitle('Recommended Products | Salinaka');
+  useDocumentTitle('Productos Recomendados | Joyas Sol');
   useScrollTop();
 
   const {
@@ -20,7 +20,7 @@ const RecommendedProducts = () => {
       <div className="featured">
         <div className="banner">
           <div className="banner-desc">
-            <h1>Recommended Products</h1>
+            <h1>Productos Recomendados</h1>
           </div>
           <div className="banner-img">
             <img src={bannerImg} alt="" />
@@ -32,7 +32,7 @@ const RecommendedProducts = () => {
               <MessageDisplay
                 message={error}
                 action={fetchRecommendedProducts}
-                buttonLabel="Try Again"
+                buttonLabel="Volver a Intentar"
               />
             ) : (
               <ProductShowcaseGrid

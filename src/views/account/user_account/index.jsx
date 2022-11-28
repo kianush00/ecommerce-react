@@ -17,7 +17,7 @@ const Loader = () => (
 
 const UserAccount = () => {
   useScrollTop();
-  useDocumentTitle('My Account | Salinaka');
+  useDocumentTitle('Mi Cuenta | Joyas Sol');
 
   return (
     <UserTab>

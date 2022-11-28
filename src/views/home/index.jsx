@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-  useDocumentTitle('Salinaka | Home');
+  useDocumentTitle('Joyas Sol | Inicio');
   useScrollTop();
 
   const {
@@ -55,7 +55,7 @@ const Home = () => {
             <MessageDisplay
               message={errorFeatured}
               action={fetchFeaturedProducts}
-              buttonLabel="Try Again"
+              buttonLabel="Volver a Intentar"
             />
           ) : (
             <ProductShowcaseGrid
@@ -73,7 +73,7 @@ const Home = () => {
             <MessageDisplay
               message={errorRecommended}
               action={fetchRecommendedProducts}
-              buttonLabel="Try Again"
+              buttonLabel="Volver a Intentar"
             />
           ) : (
             <ProductShowcaseGrid

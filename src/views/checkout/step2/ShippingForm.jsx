@@ -13,8 +13,8 @@ const ShippingForm = () => {
             <Field
               name="fullname"
               type="text"
-              label="* Full Name"
-              placeholder="Enter your full name"
+              label="* Nombre Completo"
+              placeholder="Ingresa tu nombre completo"
               component={CustomInput}
               style={{ textTransform: 'capitalize' }}
             />

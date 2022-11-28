@@ -16,8 +16,8 @@ const EditForm = ({ isLoading, authProvider }) => {
         disabled={isLoading}
         name="fullname"
         type="text"
-        label="* Full Name"
-        placeholder="Enter your full name"
+        label="* Nombre completo"
+        placeholder="Ingresa tu nombre completo"
         component={CustomInput}
         style={{ textTransform: 'capitalize' }}
       />
@@ -25,7 +25,7 @@ const EditForm = ({ isLoading, authProvider }) => {
         disabled={authProvider !== 'password' || isLoading}
         name="email"
         type="email"
-        label="* Email Address"
+        label="* Email"
         placeholder="test@example.com"
         component={CustomInput}
       />
@@ -33,7 +33,7 @@ const EditForm = ({ isLoading, authProvider }) => {
         disabled={isLoading}
         name="address"
         type="text"
-        label="Address (Will be used for checkout)"
+        label="Dirección (Será utilizada para las compras)"
         placeholder="#245 Brgy. Maligalig, Arayat Pampanga, Philippines"
         component={CustomInput}
         style={{ textTransform: 'capitalize' }}
@@ -42,7 +42,7 @@ const EditForm = ({ isLoading, authProvider }) => {
         defaultValue={values.mobile}
         name="mobile"
         disabled={isLoading}
-        label="Mobile Number (Will be used for checkout)"
+        label="Número de teléfono (Será utilizado para las compras)"
       />
       <br />
       <div className="edit-user-action">
@@ -54,7 +54,7 @@ const EditForm = ({ isLoading, authProvider }) => {
         >
           <ArrowLeftOutlined />
           &nbsp;
-          Back to Profile
+          Regresar al Perfil
         </button>
         <button
           className="button w-100-mobile"

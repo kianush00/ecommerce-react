@@ -69,7 +69,7 @@ const ViewProduct = () => {
           <Link to={SHOP}>
             <h3 className="button-link d-inline-flex">
               <ArrowLeftOutlined />
-              &nbsp; Back to shop
+              &nbsp; Volver a la tienda
             </h3>
           </Link>
           <div className="product-modal">
@@ -108,11 +108,11 @@ const ViewProduct = () => {
               <div className="divider" />
               <br />
               <div>
-                <span className="text-subtle">Lens Width and Frame Size</span>
+                <span className="text-subtle">Elegir Medida</span>
                 <br />
                 <br />
                 <Select
-                  placeholder="--Select Size--"
+                  placeholder="--Elegir Medida--"
                   onChange={onSelectedSizeChange}
                   options={product.sizes.sort((a, b) => (a < b ? -1 : 1)).map((size) => ({ label: `${size} mm`, value: size }))}
                   styles={{ menu: (provided) => ({ ...provided, zIndex: 10 }) }}
@@ -121,7 +121,7 @@ const ViewProduct = () => {
               <br />
               {product.availableColors.length >= 1 && (
                 <div>
-                  <span className="text-subtle">Choose Color</span>
+                  <span className="text-subtle">Elegir Color</span>
                   <br />
                   <br />
                   <ColorChooser
@@ -137,21 +137,21 @@ const ViewProduct = () => {
                   onClick={handleAddToBasket}
                   type="button"
                 >
-                  {isItemOnBasket(product.id) ? 'Remove From Basket' : 'Add To Basket'}
+                  {isItemOnBasket(product.id) ? 'Eliminar del carrito' : 'Añadir al carrito'}
                 </button>
               </div>
             </div>
           </div>
           <div style={{ marginTop: '10rem' }}>
             <div className="display-header">
-              <h1>Recommended</h1>
-              <Link to={RECOMMENDED_PRODUCTS}>See All</Link>
+              <h1>Recomendados</h1>
+              <Link to={RECOMMENDED_PRODUCTS}>Ver Todos</Link>
             </div>
             {errorFeatured && !isLoadingFeatured ? (
               <MessageDisplay
                 message={error}
                 action={fetchRecommendedProducts}
-                buttonLabel="Try Again"
+                buttonLabel="Volver a Intentar"
               />
             ) : (
               <ProductShowcaseGrid products={recommendedProducts} skeletonCount={3} />

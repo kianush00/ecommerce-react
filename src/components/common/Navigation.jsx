@@ -72,15 +72,15 @@ const Navigation = () => {
         <Link onClick={onClickLink} to="/"><img alt="Logo" src={logo} /></Link>
       </div>
       <ul className="navigation-menu-main">
-        <li><NavLink activeClassName="navigation-menu-active" exact to={ROUTE.HOME}>Home</NavLink></li>
-        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.SHOP}>Shop</NavLink></li>
-        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.FEATURED_PRODUCTS}>Featured</NavLink></li>
-        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.RECOMMENDED_PRODUCTS}>Recommended</NavLink></li>
+        <li><NavLink activeClassName="navigation-menu-active" exact to={ROUTE.HOME}>Inicio</NavLink></li>
+        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.SHOP}>Tienda</NavLink></li>
+        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.FEATURED_PRODUCTS}>Destacados</NavLink></li>
+        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.RECOMMENDED_PRODUCTS}>Recomendados</NavLink></li>
       </ul>
       {(pathname === ROUTE.SHOP || pathname === ROUTE.SEARCH) && (
         <FiltersToggle>
           <button className="button-muted button-small" type="button">
-            Filters &nbsp;
+            Filtros &nbsp;
             <FilterOutlined />
           </button>
         </FiltersToggle>
@@ -116,7 +116,7 @@ const Navigation = () => {
                 onClick={onClickLink}
                 to={ROUTE.SIGNUP}
               >
-                Sign Up
+                Registrarse
               </Link>
             )}
             {pathname !== ROUTE.SIGNIN && (
@@ -125,7 +125,7 @@ const Navigation = () => {
                 onClick={onClickLink}
                 to={ROUTE.SIGNIN}
               >
-                Sign In
+                Iniciar sesión
               </Link>
             )}
           </li>
