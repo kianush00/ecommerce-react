@@ -2,6 +2,7 @@ export const HOME = '/';
 export const SHOP = '/shop';
 export const FEATURED_PRODUCTS = '/featured';
 export const RECOMMENDED_PRODUCTS = '/recommended';
+export const CREATE_JEWEL = '/create_jewel';
 export const ACCOUNT = '/account';
 export const ACCOUNT_EDIT = '/account/edit';
 export const ADMIN_DASHBOARD = '/admin/dashboard';
