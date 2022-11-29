@@ -80,11 +80,11 @@ const Filters = ({ closeModal }) => {
   return (
     <div className="filters">
       <div className="filters-field">
-        <span>Brand</span>
+        <span>Categoría</span>
         <br />
         <br />
         {products.length === 0 && isLoading ? (
-          <h5 className="text-subtle">Loading Filter</h5>
+          <h5 className="text-subtle">Cargando Filtro</h5>
         ) : (
           <select
             className="filters-brand"
@@ -92,16 +92,15 @@ const Filters = ({ closeModal }) => {
             disabled={isLoading || products.length === 0}
             onChange={onBrandFilterChange}
           >
-            <option value="">All Brands</option>
-            <option value="salt">Salt Maalat</option>
-            <option value="betsin">Betsin Maalat</option>
-            <option value="black">Black Kibal</option>
-            <option value="sexbomb">Sexbomb</option>
+            <option value="">Todas las categorías</option>
+            <option value="collares">Collares</option>
+            <option value="aros">Aros</option>
+            <option value="pulseras">Pulseras</option>
           </select>
         )}
       </div>
       <div className="filters-field">
-        <span>Sort By</span>
+        <span>Ordenar por</span>
         <br />
         <br />
         <select
@@ -110,21 +109,21 @@ const Filters = ({ closeModal }) => {
           disabled={isLoading || products.length === 0}
           onChange={onSortFilterChange}
         >
-          <option value="">None</option>
-          <option value="name-asc">Name Ascending A - Z</option>
-          <option value="name-desc">Name Descending Z - A</option>
-          <option value="price-desc">Price High - Low</option>
-          <option value="price-asc">Price Low - High</option>
+          <option value="">Ninguno</option>
+          <option value="name-asc">Nombre Ascendiente A - Z</option>
+          <option value="name-desc">Nombre Descendiente Z - A</option>
+          <option value="price-desc">Precio Alto - Bajo</option>
+          <option value="price-asc">Precio Bajo - Alto</option>
         </select>
       </div>
       <div className="filters-field">
-        <span>Price Range</span>
+        <span>Rango de Precios</span>
         <br />
         <br />
         {(products.length === 0 && isLoading) || max === 0 ? (
-          <h5 className="text-subtle">Loading Filter</h5>
+          <h5 className="text-subtle">Cargando Filtro</h5>
         ) : products.length === 1 ? (
-          <h5 className="text-subtle">No Price Range</h5>
+          <h5 className="text-subtle">Sin Rango de Precios</h5>
         ) : (
           <PriceRange
             min={min}
@@ -144,7 +143,7 @@ const Filters = ({ closeModal }) => {
           onClick={onApplyFilter}
           type="button"
         >
-          Apply filters
+          Aplicar filtros
         </button>
         <button
           className="filters-button button button-border button-small"
@@ -152,7 +151,7 @@ const Filters = ({ closeModal }) => {
           onClick={onResetFilter}
           type="button"
         >
-          Reset filters
+          Restablecer filtros
         </button>
       </div>
     </div>
