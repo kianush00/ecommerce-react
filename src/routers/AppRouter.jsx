@@ -45,7 +45,7 @@ const AppRouter = () => (
           path={ROUTES.RECOMMENDED_PRODUCTS}
         />
         <Route
-          component={view.create_jewel}
+          component={view.CreateJewel}
           exact
           path={ROUTES.CREATE_JEWEL}
         />

@@ -76,7 +76,7 @@ const Navigation = () => {
         <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.SHOP}>Tienda</NavLink></li>
         <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.FEATURED_PRODUCTS}>Destacados</NavLink></li>
         <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.RECOMMENDED_PRODUCTS}>Recomendados</NavLink></li>
-        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.CREATE_JEWEL}>Crear tu Joya</NavLink></li>
+        <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.CREATE_JEWEL}>Crea tu Joya</NavLink></li>
 
       </ul>
       {(pathname === ROUTE.SHOP || pathname === ROUTE.SEARCH) && (

@@ -50,7 +50,7 @@ const Search = ({ match }) => {
               <div className="product-list-header">
                 <div className="product-list-header-title">
                   <h5>
-                    {`Found ${store.products.length} ${store.products.length > 1 ? 'products' : 'product'} with keyword ${searchKey}`}
+                    {`Se encontró ${store.products.length} ${store.products.length > 1 ? 'productos' : 'producto'} con la palabra clave ${searchKey}`}
                   </h5>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const Search = ({ match }) => {
   return (
     <main className="content">
       <div className="loader">
-        <h4>Searching Product...</h4>
+        <h4>Buscando Producto...</h4>
         <br />
         <LoadingOutlined style={{ fontSize: '3rem' }} />
       </div>
