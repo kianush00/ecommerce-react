@@ -5,47 +5,33 @@ import React from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 import { selectFilter } from '@/selectors/selector';
 import { Toolbar } from '@mui/material';
-import { AppBar } from '@mui/material';
 import 'survey-core/defaultV2.min.css';
 import 'survey-core/defaultV2.min.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
+import {surveyJson, joyas} from "./json"
 
 StylesManager.applyTheme("defaultV2");
 
-const surveyJson = {
-  "elements": [
-    {
-      "type": "radiogroup",
-      "name": "jewel_type",
-      "title": "¿Que tipo de joya deseas ordenar?",
-      "isRequired": true,
-      "showNoneItem": false,
-      "colCount": 3,
-      "choices": [
-        "Collar",
-        "Pulsera",
-        "Anillo"
-      ]
-    },
-    {
-      "type": "radiogroup",
-      "name": "jewel_material",
-      "title": "¿De que material deseas la joya?",
-      "isRequired": true,
-      "showNoneItem": false,
-      "colCount": 3,
-      "choices": [
-        "Oro",
-        "Plata",
-        "Bronce"
-      ]
-    }
-  ]
-};
+//joyas["collar"].price
+ 
+ 
+
 
 function CreateJewel() {
   const survey = new Model(surveyJson);
+
+
+  let converter =new showdown.Converter();
+  survey.onTextMarkdown.add(function (survey, options) {
+    // convert the markdown text to html
+    var str = converter.makeHtml(options.text);
+    // remove root paragraphs <p></p>
+    str = str.substring(3);
+    str = str.substring(0, str.length - 4);
+    // set html
+    options.html = str;
+  });
   return (
     <React.Fragment>
       
