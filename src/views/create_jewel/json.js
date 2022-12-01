@@ -1,7 +1,8 @@
 const precio_oro = 15000;
 const precio_plata = 8000;
 
-const resolucion = "175x175";
+const resolucion_2_columnas = "175x175";
+const resolucion_3_columnas = "250x250";
 
 const joyas = [
   {
@@ -106,8 +107,10 @@ const joyas = [
 
 const surveyJson = {
   elements: [],
+  clearInvisibleValues: "onHidden",
   completeText: "Completar",
-  completedHtml: "<p><h1>¡Tu pedido ha sido enviado satisfactoriamente!</h1></p>"
+  completedHtml: "<p><h1>¡Tu pedido ha sido enviado satisfactoriamente!</h1></p>",
+  width : 900
 };
 surveyJson.elements.push({
   type: "radiogroup",
@@ -122,7 +125,7 @@ surveyJson.elements.push({
 joyas.forEach((joya,index) => {
   surveyJson.elements[0].choices.push({
     value: joya.name,
-    text: `${joya.name} - $${joya.price} ![](${joya.image} =${resolucion})`
+    text: `${joya.name} - $${joya.price} ![](${joya.image} =${resolucion_2_columnas})`
   });
 
   //Material
@@ -140,7 +143,7 @@ joyas.forEach((joya,index) => {
   joya.materials.forEach((material) => {
     surveyJson.elements[surveyJson.elements.length-1].choices.push({
       value: `${joya.name}_${material.name}`,
-      text: `${material.name} - $${material.price} ![](${material.image} =${resolucion})`,
+      text: `${material.name} - $${material.price} ![](${material.image} =${resolucion_3_columnas})`,
     })
   })
 
@@ -159,7 +162,7 @@ joyas.forEach((joya,index) => {
   joya.colgantes.forEach((colgante)=>{
     surveyJson.elements[surveyJson.elements.length-1].choices.push({
       value: `${joya.name}_${colgante.name}`,
-      text: `${colgante.name} - $${colgante.price} ![](${colgante.image} =${resolucion})`,
+      text: `${colgante.name} - $${colgante.price} ![](${colgante.image} =${resolucion_3_columnas})`,
     })
   })
 
