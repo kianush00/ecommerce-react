@@ -106,12 +106,15 @@ const joyas = [
 
 const surveyJson = {
   elements: [],
+  completeText: "Completar",
+  completedHtml: "<p><h1>¡Tu pedido ha sido enviado satisfactoriamente!</h1></p>"
 };
 surveyJson.elements.push({
   type: "radiogroup",
   name: "jewel_type",
-  title: "¿Qué tipo de joya deseas ordenar?",
+  title: "¿Qué tipo de joya deseas?",
   isRequired: true,
+  onErrorCustomText: "hola",
   showNoneItem: false,
   colCount: joyas.length,
   choices: []
@@ -145,7 +148,7 @@ joyas.forEach((joya,index) => {
   surveyJson.elements.push({
     type: "radiogroup",
     name: `${joya.name}_colgante`,
-    title: "¿Cual colgante te gusta mas?",
+    title: "¿Cuál colgante te gusta más?",
     isRequired: true,
     visibleIf: `{jewel_type}='${joya.name}'`,
     showNoneItem: false,

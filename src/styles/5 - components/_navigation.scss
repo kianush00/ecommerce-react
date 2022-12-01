@@ -24,7 +24,7 @@
 
   .logo {
     height: inherit;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 
   .logo img {
@@ -39,7 +39,8 @@
   }
 
   .searchbar {
-    width: 300px;
+    width: 220px;
+    left: 20px;
   }
 }
 
@@ -63,7 +64,7 @@
 
 .navigation-menu-main {
   padding-left: 0;
-  margin-right: 2rem;
+  margin-right: 1rem;
   flex-grow: 1;
 
   li {

@@ -1,12 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { AppliedFilters, ProductGrid, ProductList } from '@/components/product';
-import { useDocumentTitle, useScrollTop } from '@/hooks';
 import React from 'react';
-import { shallowEqual, useSelector } from 'react-redux';
-import { selectFilter } from '@/selectors/selector';
 import { Toolbar } from '@mui/material';
-import 'survey-core/defaultV2.min.css';
-import 'survey-core/defaultV2.min.css';
+import 'survey-core/defaultV2.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import {surveyJson, joyas} from "./json"
@@ -20,7 +15,9 @@ StylesManager.applyTheme("defaultV2");
 
 function CreateJewel() {
   const survey = new Model(surveyJson);
-
+  survey.onErrorCustomText.add(function (sender, options) {
+    options.text = "Respuesta requerida.";
+  });
 
   let converter =new showdown.Converter();
   survey.onTextMarkdown.add(function (survey, options) {
