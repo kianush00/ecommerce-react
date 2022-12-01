@@ -110,7 +110,7 @@ const surveyJson = {
   clearInvisibleValues: "onHidden",
   completeText: "Completar",
   completedHtml: "<p><h1>¡Tu pedido ha sido enviado satisfactoriamente!</h1></p>",
-  width : 900
+  width: 900
 };
 surveyJson.elements.push({
   type: "radiogroup",
@@ -122,9 +122,12 @@ surveyJson.elements.push({
   colCount: joyas.length,
   choices: []
 });
-joyas.forEach((joya,index) => {
+joyas.forEach((joya, index) => {
   surveyJson.elements[0].choices.push({
-    value: joya.name,
+    value: {
+      name_joya: joya.name,
+      price_joya: joya.price
+    },
     text: `${joya.name} - $${joya.price} ![](${joya.image} =${resolucion_2_columnas})`
   });
 
@@ -134,15 +137,19 @@ joyas.forEach((joya,index) => {
     name: `${joya.name}_material`,
     title: "¿De qué material deseas?",
     isRequired: true,
-    visibleIf: `{jewel_type}='${joya.name}'`,
+    visibleIf: `{jewel_type.name_joya}='${joya.name}'`,
     showNoneItem: false,
     colCount: joya.materials.length,
     choices: []
   })
 
   joya.materials.forEach((material) => {
-    surveyJson.elements[surveyJson.elements.length-1].choices.push({
-      value: `${joya.name}_${material.name}`,
+    surveyJson.elements[surveyJson.elements.length - 1].choices.push({
+      value: {
+        name_joya: joya.name,
+        name_material: material.name,
+        price_material: material.price
+      },
       text: `${material.name} - $${material.price} ![](${material.image} =${resolucion_3_columnas})`,
     })
   })
@@ -153,19 +160,28 @@ joyas.forEach((joya,index) => {
     name: `${joya.name}_colgante`,
     title: "¿Cuál colgante te gusta más?",
     isRequired: true,
-    visibleIf: `{jewel_type}='${joya.name}'`,
+    visibleIf: `{jewel_type.name_joya}='${joya.name}'`,
     showNoneItem: false,
     colCount: joya.colgantes.length,
     choices: []
   })
 
-  joya.colgantes.forEach((colgante)=>{
-    surveyJson.elements[surveyJson.elements.length-1].choices.push({
-      value: `${joya.name}_${colgante.name}`,
+  joya.colgantes.forEach((colgante) => {
+    surveyJson.elements[surveyJson.elements.length - 1].choices.push({
+      value: {
+        name_joya: joya.name,
+        name_colgante: colgante.name,
+        price_colgante: colgante.price
+      },
       text: `${colgante.name} - $${colgante.price} ![](${colgante.image} =${resolucion_3_columnas})`,
     })
   })
 
 });
+surveyJson.elements.push({
+  "type": "html",
+  "name": "precioTotal",
+  "html": "Precio <span id='precioTotal'>$ 0.00</span>"
+})
 
 export { surveyJson, joyas };
