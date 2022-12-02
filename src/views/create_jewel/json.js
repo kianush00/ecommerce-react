@@ -8,19 +8,19 @@ const joyas = [
   {
     name: "Collar",
     price: 10000,
-    image: "src/images/create-jewel/collar/collar.jpg",
+    image: "https://us.pandora.net/dw/image/v2/AAVX_PRD/on/demandware.static/-/Sites-pandora-master-catalog/default/dw48dae575/productimages/singlepackshot/352187C01_RGB.jpg?sw=440&sh=440&sm=fit&sfrm=png&bgcolor=F5F5F5",
     materials: [
       {
         name: "Oro",
         price: precio_oro,
         image:
-          "src/images/create-jewel/collar/material/oro.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_735616-MLC48943537073_012022-W.jpg",
       },
       {
         name: "Plata",
         price: precio_plata,
         image:
-          "src/images/create-jewel/collar/material/plata.jpg",
+          "https://m.media-amazon.com/images/I/61cd-uFKfbL._AC_SY395_.jpg",
       },
     ],
     colgantes: [
@@ -28,12 +28,12 @@ const joyas = [
       {
         name: "San Benito",
         price: 3000,
-        image: "src/images/create-jewel/collar/colgante/san-benito.jpg",
+        image: "https://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2022/09/12105240/cle134a-1.jpg",
       },
       {
         name: "Hoja de monstera",
         price: 5000,
-        image: "src/images/create-jewel/collar/colgante/hoja-de-monstera.jpg",
+        image: "https://img.freepik.com/fotos-premium/hoja-monstera-dorada-sobre-maqueta-fondo-blanco_53876-107653.jpg?w=2000",
       },
     ],
   },
@@ -41,19 +41,19 @@ const joyas = [
   {
     name: "Aro",
     price: 7500,
-    image: "src/images/create-jewel/aros/aros.jpg",
+    image: "https://www.ldoceonline.com/media/english/illustration/earrings.jpg?version=1.2.58",
     materials: [
       {
         name: "Oro",
         price: precio_oro,
         image:
-          "src/images/create-jewel/aros/material/oro.jpg",
+          "https://image.ejohri.com/catalog/product/462/BL1022-1.jpg",
       },
       {
         name: "Plata",
         price: precio_plata,
         image:
-          "src/images/create-jewel/aros/material/plata.jpg",
+          "https://i.pinimg.com/474x/30/5d/04/305d04b1b02b812ea12d128e7cccc0ee--silver-stud-earrings-flower-earrings.jpg",
       },
     ],
     colgantes: [
@@ -61,31 +61,31 @@ const joyas = [
       {
         name: "Corazón",
         price: 4000,
-        image: "src/images/create-jewel/aros/colgante/corazon.jpg",
+        image: "https://qazar.cl/wp-content/uploads/2019/05/IMG_2621.jpg",
       },
       {
         name: "Perlas",
         price: 3500,
-        image: "src/images/create-jewel/aros/colgante/perlas.jpeg",
+        image: "https://falabella.scene7.com/is/image/Falabella/gsc_112630489_341013_7?wid=800&hei=800&qlt=70",
       },
     ],
   },
   {
     name: "Pulsera",
     price: 2000,
-    image: "src/images/create-jewel/pulsera/pulsera.jpeg",
+    image: "https://rukminim1.flixcart.com/image/832/832/jrgo4280/precious-bangle-bracelet/x/s/m/free-size-bnjbcbcd2c-malabar-gold-and-diamonds-original-imafd8zgr8v8xutg.jpeg?q=70",
     materials: [
       {
         name: "Oro",
         price: precio_oro,
         image:
-          "src/images/create-jewel/pulsera/material/oro.jpg",
+          "https://m.media-amazon.com/images/I/71gh3bpIJDL._UL1500_.jpg",
       },
       {
         name: "Plata",
         price: precio_plata,
         image:
-          "src/images/create-jewel/pulsera/material/plata.jpg",
+          "https://stylesatlife.com/wp-content/uploads/2016/10/Silver-Bracelets.jpg.webp",
       },
     ],
 
@@ -94,17 +94,16 @@ const joyas = [
       {
         name: "Corazón",
         price: 5000,
-        image: "src/images/create-jewel/pulsera/colgante/corazon.jpg",
+        image: "https://qazar.cl/wp-content/uploads/2019/05/IMG_2621.jpg",
       },
       {
         name: "Estrella",
         price: 3500,
-        image: "src/images/create-jewel/pulsera/colgante/estrella.jpeg",
+        image: "https://joyasnehgne.cl/wp-content/uploads/2021/01/CO010-scaled.jpeg",
       },
     ],
   },
 ];
-
 const surveyJson = {
   elements: [],
   clearInvisibleValues: "onHidden",
