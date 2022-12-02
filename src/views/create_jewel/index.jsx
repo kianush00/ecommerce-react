@@ -29,11 +29,53 @@ function CreateJewel() {
     // set html
     options.html = str;
   });
+
+  survey.onComplete.add(function (sender) {
+    document.querySelector('#surveyResult').textContent = "Result JSON:\n" + JSON.stringify(sender.data, null, 3);
+  });
+  function Pedido ()  {
+    this.jewel_type = {
+      name: "",
+      price: 0
+    }
+    this.material = {
+      name: "",
+      price: 0
+    }
+    this.colgante = {
+        name: "",
+        price: 0
+    }
+    this.getPrecioTotal = ()=>
+      this.jewel_type.price + this.material.price + this.colgante.price;
+    
+
+  }
+  let pedido; //OBJETO PEDIDO A MANIPULAR PARA ENVIAR AL CARRO DE COMPRAS
+  survey.onValueChanging.add((sender ,options)=>{
+    //AQUI DEBE ESTAR EL SCRIPT QUE VA IR ACTUALIZANDO EL PRECIO
+    
+    if(options.name == "jewel_type"){
+      pedido = new Pedido(); //SI cambia de joya, crea un objeto nuevo
+      survey.clear();
+      pedido.jewel_type.name = options.value.name_joya;
+      pedido.jewel_type.price = options.value.price_joya;
+      
+    }else if(options.name.includes("material")){
+      pedido.material.name = options.value.name_material;
+      pedido.material.price = options.value.price_material;
+    }else if(options.name.includes("colgante")){
+      pedido.colgante.name = options.value.name_colgante;
+      pedido.colgante.price = options.value.price_colgante;
+    }
+    document.getElementById("precioTotal").innerHTML = `$${pedido.getPrecioTotal()}`
+  })
   return (
     <React.Fragment>
       
       <Toolbar />
       <Survey model={survey} />
+      
     </React.Fragment>
       
         
