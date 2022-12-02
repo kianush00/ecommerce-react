@@ -51,13 +51,13 @@ function CreateJewel() {
     
 
   }
-  let pedido = new Pedido(); //OBJETO PEDIDO A MANIPULAR PARA ENVIAR AL CARRO DE COMPRAS
-  console.log(pedido)
+  let pedido; //OBJETO PEDIDO A MANIPULAR PARA ENVIAR AL CARRO DE COMPRAS
   survey.onValueChanging.add((sender ,options)=>{
     //AQUI DEBE ESTAR EL SCRIPT QUE VA IR ACTUALIZANDO EL PRECIO
     
     if(options.name == "jewel_type"){
       pedido = new Pedido(); //SI cambia de joya, crea un objeto nuevo
+      survey.clear();
       pedido.jewel_type.name = options.value.name_joya;
       pedido.jewel_type.price = options.value.price_joya;
       

@@ -8,19 +8,19 @@ const joyas = [
   {
     name: "Collar",
     price: 10000,
-    image: "https://us.pandora.net/dw/image/v2/AAVX_PRD/on/demandware.static/-/Sites-pandora-master-catalog/default/dw48dae575/productimages/singlepackshot/352187C01_RGB.jpg?sw=440&sh=440&sm=fit&sfrm=png&bgcolor=F5F5F5",
+    image: "src/images/create-jewel/collar/collar.jpg",
     materials: [
       {
         name: "Oro",
         price: precio_oro,
         image:
-          "https://thumbs.dreamstime.com/b/yellow-gold-necklace-18839931.jpg",
+          "src/images/create-jewel/collar/material/oro.jpg",
       },
       {
         name: "Plata",
         price: precio_plata,
         image:
-          "https://m.media-amazon.com/images/I/61cd-uFKfbL._AC_SY395_.jpg",
+          "src/images/create-jewel/collar/material/plata.jpg",
       },
     ],
     colgantes: [
@@ -28,12 +28,12 @@ const joyas = [
       {
         name: "San Benito",
         price: 3000,
-        image: "https://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2022/09/12105240/cle134a-1.jpg",
+        image: "src/images/create-jewel/collar/colgante/san-benito.jpg",
       },
       {
         name: "Hoja de monstera",
         price: 5000,
-        image: "https://img.freepik.com/fotos-premium/hoja-monstera-dorada-sobre-maqueta-fondo-blanco_53876-107653.jpg?w=2000",
+        image: "src/images/create-jewel/collar/colgante/hoja-de-monstera.jpg",
       },
     ],
   },
@@ -41,19 +41,19 @@ const joyas = [
   {
     name: "Aro",
     price: 7500,
-    image: "https://www.ldoceonline.com/media/english/illustration/earrings.jpg?version=1.2.58",
+    image: "src/images/create-jewel/aros/aros.jpg",
     materials: [
       {
         name: "Oro",
         price: precio_oro,
         image:
-          "https://image.ejohri.com/catalog/product/462/BL1022-1.jpg",
+          "src/images/create-jewel/aros/material/oro.jpg",
       },
       {
         name: "Plata",
         price: precio_plata,
         image:
-          "https://i.pinimg.com/474x/30/5d/04/305d04b1b02b812ea12d128e7cccc0ee--silver-stud-earrings-flower-earrings.jpg",
+          "src/images/create-jewel/aros/material/plata.jpg",
       },
     ],
     colgantes: [
@@ -61,31 +61,31 @@ const joyas = [
       {
         name: "Corazón",
         price: 4000,
-        image: "https://qazar.cl/wp-content/uploads/2019/05/IMG_2621.jpg",
+        image: "src/images/create-jewel/aros/colgante/corazon.jpg",
       },
       {
         name: "Perlas",
         price: 3500,
-        image: "https://falabella.scene7.com/is/image/Falabella/gsc_112630489_341013_7?wid=800&hei=800&qlt=70",
+        image: "src/images/create-jewel/aros/colgante/perlas.jpeg",
       },
     ],
   },
   {
     name: "Pulsera",
     price: 2000,
-    image: "https://rukminim1.flixcart.com/image/832/832/jrgo4280/precious-bangle-bracelet/x/s/m/free-size-bnjbcbcd2c-malabar-gold-and-diamonds-original-imafd8zgr8v8xutg.jpeg?q=70",
+    image: "src/images/create-jewel/pulsera/pulsera.jpeg",
     materials: [
       {
         name: "Oro",
         price: precio_oro,
         image:
-          "https://m.media-amazon.com/images/I/71gh3bpIJDL._UL1500_.jpg",
+          "src/images/create-jewel/pulsera/material/oro.jpg",
       },
       {
         name: "Plata",
         price: precio_plata,
         image:
-          "https://stylesatlife.com/wp-content/uploads/2016/10/Silver-Bracelets.jpg.webp",
+          "src/images/create-jewel/pulsera/material/plata.jpg",
       },
     ],
 
@@ -94,12 +94,12 @@ const joyas = [
       {
         name: "Corazón",
         price: 5000,
-        image: "https://qazar.cl/wp-content/uploads/2019/05/IMG_2621.jpg",
+        image: "src/images/create-jewel/pulsera/colgante/corazon.jpg",
       },
       {
         name: "Estrella",
         price: 3500,
-        image: "https://joyasnehgne.cl/wp-content/uploads/2021/01/CO010-scaled.jpeg",
+        image: "src/images/create-jewel/pulsera/colgante/estrella.jpeg",
       },
     ],
   },
@@ -181,7 +181,7 @@ joyas.forEach((joya, index) => {
 surveyJson.elements.push({
   "type": "html",
   "name": "precioTotal",
-  "html": "Precio <span id='precioTotal'>$ 0.00</span>"
+  "html": "<div style='font-size:30px'>Precio total <span id='precioTotal' style='font-size:30px'>$ 0.00</span> </div>"
 })
 
 export { surveyJson, joyas };
