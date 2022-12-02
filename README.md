@@ -1,45 +1,29 @@
-# Salinaka | E-commerce react app
+# Joyas Sol | E-commerce react app
 Simple ecommerce react js app with firebase [typescript].
-![Firebase Deploy](https://github.com/jgudo/ecommerce-react/workflows/Firebase%20Deploy/badge.svg)
 
-### [Live demo](https://salinaka-ecommerce.web.app/)
+### [Live demo](https://ecommerce-joyassol.web.app/)
 
-![Salinaka screenshot](https://raw.githubusercontent.com/jgudo/ecommerce-react/master/static/screeny1.png)
-![Salinaka screenshot](https://raw.githubusercontent.com/jgudo/ecommerce-react/master/static/screeny2.png)
-![Salinaka screenshot](https://raw.githubusercontent.com/jgudo/ecommerce-react/master/static/screeny3.png)
-![Salinaka screenshot](https://raw.githubusercontent.com/jgudo/ecommerce-react/master/static/screeny7.png)
 
 ## Run Locally
-### 1. Install Dependencies
-```sh
-$ yarn install
+2. cd ecommerce-react/
+3. git switch ft_frontend
+4. actualizar node a la versión 18
+5. sudo npm install --global yarn
+6 yarn install
+7. npm install -g firebase-tools
+8. ejecutar el comando "firebase" para comprobar si se instaló correctamente
+9. yarn add firebase@8.4.3
+10. crear un archivo .env que tenga lo siguiente:
 ```
-
-### 2. Create a new firebase project
-Login to your google account and create a new firebase project [here](https://console.firebase.google.com/u/0/)
-
-Create an `.env` file and add the following variables.
-
+VITE_FIREBASE_API_KEY=***************************
+VITE_FIREBASE_AUTH_DOMAIN=ecommerce-joyassol.firebaseapp.com
+VITE_FIREBASE_DB_URL=https://ecommerce-joyassol.firebaseio.com/
+VITE_FIREBASE_PROJECT_ID=ecommerce-joyassol
+VITE_FIREBASE_STORAGE_BUCKET=ecommerce-joyassol.appspot.com
+VITE_FIREBASE_MSG_SENDER_ID=1234567890123456
+VITE_FIREBASE_APP_ID=*****************************
 ```
-// SAMPLE CONFIG .env, you should put the actual config details found on your project settings
-
-FIREBASE_API_KEY=AIzaKJgkjhSdfSgkjhdkKJdkjowf
-FIREBASE_AUTH_DOMAIN=yourauthdomin.firebaseapp.com
-FIREBASE_DB_URL=https://yourdburl.firebaseio.com
-FIREBASE_PROJECT_ID=yourproject-id
-FIREBASE_STORAGE_BUCKET=yourstoragebucket.appspot.com
-FIREBASE_MSG_SENDER_ID=43597918523958
-FIREBASE_APP_ID=234598789798798fg3-034
-
-``` 
-
-After setting up necessary configuration,
-create a **Database** and choose **Cloud Firestore** and start in test mode
-
-### 3. Run development server
-```sh 
-$ yarn dev
-```
+ 11. yarn dev
 
 ---
 
@@ -47,6 +31,16 @@ $ yarn dev
 ```sh
 $ yarn build
 ```
+
+## Deploy the project:
+
+1. yarn install
+2. yarn build
+3. comprobar funcionamiento con 
+```firebase serve --only hosting```
+
+4. firebase deploy --only hosting
+
 
 ## How to add products or perform CRUD operations for Admin
 1. Navigate to your site to `/signup`
